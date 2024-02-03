@@ -34,6 +34,31 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleKeyDown);
   }, []);
 
+  useEffect(() => {
+    let clientX;
+    let clientY;
+
+    const handleTouchStart = (e) => {
+      clientX = e.touches[0].clientX;
+      clientY = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e) => {
+      if (clientY > e.changedTouches[0].clientY) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchend", handleTouchEnd);
+    return () => {
+      handleTouchStart;
+      handleTouchEnd;
+    };
+  }, []);
+
   return (
     <>
       <GlobalStyle />

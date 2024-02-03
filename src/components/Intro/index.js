@@ -44,13 +44,13 @@ const SubTitle = styled(H3)`
   transition: color 0.5s ease, transform 0.5s ease;
   user-select: none;
   display: block;
-  padding-top: 24px;
+  margin-top: 24px;
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
 
   @media (min-width: 720px) {
-    padding-top: 18px;
+    margin-top: 18px;
     max-width: none;
   }
 `;
@@ -58,10 +58,10 @@ const SubTitle = styled(H3)`
 const HiddenTitle = styled(SubTitle)`
   color: ${({ $scrolled }) =>
     $scrolled ? "rgba(255, 255, 255, 0.6)" : "#000"};
-  padding-top: 14px;
+  margin-top: 14px;
 
   @media (min-width: 720px) {
-    padding-top: 10px;
+    margin-top: 10px;
   }
 `;
 

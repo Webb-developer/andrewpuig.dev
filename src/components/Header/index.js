@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const HeaderStyle = styled.header`
   position: fixed;
-  top: 20px;
+  top: 24px;
   left: 20px;
   z-index: 1;
 
@@ -16,7 +16,7 @@ const Link = styled.a`
   display: inline-block;
   padding: 8px 16px;
   border-radius: 100px;
-  font-size: 14px;
+  font-size: 15px;
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
   text-decoration: none;
@@ -25,10 +25,6 @@ const Link = styled.a`
   &:hover {
     background-color: #fff;
     color: #000;
-  }
-
-  @media (min-width: 720px) {
-    font-size: 15px;
   }
 `;
 
